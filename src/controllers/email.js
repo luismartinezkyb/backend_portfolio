@@ -2,14 +2,15 @@ const nodemailer = require('nodemailer');
 
 const sendEmail = async (req, res) =>{
     const { name, email, message} = req.body;
-
+    const EMAIL_PASSWORD= process.env.EMAIL_PASSWORD;
+    const EMAIL_USER= process.env.EMAIL_USER;
     var transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-          user: "luismartinezjpg@gmail.com", // generated ethereal user
-          pass: "gxwxkovtpunsxsxu", // generated ethereal password
+          user: EMAIL_USER, // generated ethereal user
+          pass: EMAIL_PASSWORD , // generated ethereal password
         },
     });
     var mailOptions = {

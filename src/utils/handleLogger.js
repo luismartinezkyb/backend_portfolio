@@ -1,5 +1,5 @@
 const {IncomingWebhook} = require('@slack/webhook');
-SLACK_WEBHOOK = process.env.SLACK_WEBHOOK;
+const SLACK_WEBHOOK = process.env.SLACK_WEBHOOK;
 
 const webHook =  new IncomingWebhook(SLACK_WEBHOOK) //rediseñamos y 
 const loggerStream = {
