@@ -12,7 +12,7 @@ const loggerStream = require('./utils/handleLogger')
 const app = express();
 
 //Settings
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 //Middleware
 PUBLIC_URL_REQUEST= process.env.PUBLIC_URL_REQUEST;

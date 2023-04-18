@@ -18,5 +18,8 @@
     "express-validator": "^7.0.1",
     "morgan-body": "^2.6.8",
     "nodemailer": "^6.9.1"
+  },
+  "engines": {
+    "node":"18.15.0"
   }
 }
