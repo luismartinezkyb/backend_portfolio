@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer');
 
 const sendEmail = async (req, res) =>{
+    
     const { name, email, message} = req.body;
     const EMAIL_PASSWORD= process.env.EMAIL_PASSWORD;
     const EMAIL_USER= process.env.EMAIL_USER;

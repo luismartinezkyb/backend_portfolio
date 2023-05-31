@@ -22,8 +22,8 @@ const allowedOrigins = [PUBLIC_URL_REQUEST];
 app.use(cors({
     //url del github
 	origin: function(origin, callback) {
-        // console.log(origin, !origin, allowedOrigins.indexOf(origin) !== -1)
-        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+        console.log(origin, !origin, allowedOrigins.indexOf(origin) !== -1)
+        if (origin && allowedOrigins.indexOf(origin) !== -1) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));
