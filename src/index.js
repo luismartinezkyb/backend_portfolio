@@ -23,13 +23,14 @@ app.use(cors({
     //url del github
 	origin: function(origin, callback) {
         console.log(origin, !origin, allowedOrigins.indexOf(origin) !== -1)
-        if (origin && allowedOrigins.indexOf(origin) !== -1) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
+        // if (origin && allowedOrigins.indexOf(origin) !== -1) {
+        //     callback(null, true);
+        // } else {
+        //     callback(new Error('Not allowed by CORS'));
+        // }
+        callback(null, true);
         },
-	method: ['POST'],	
+	method: ['POST', 'GET'],	
 }));
 
 app.use(bodyParser.json({limit: "10mb", extended: true}));
