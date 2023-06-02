@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 
 const morganBody = require('morgan-body');
-const loggerStream = require('./utils/handleLogger')
+const loggerStream = require('./src/utils/handleLogger')
 
 //INTILIAZITACIONS
 
@@ -46,7 +46,7 @@ morganBody(app,{
 
 
 //Routes
-app.use('/api',require('./routes/email'));
+app.use('/api',require('./src/routes/email'));
 app.get('/', (req, res)=>{
     res.send('Hola from vercel')
 })
